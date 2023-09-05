@@ -1,0 +1,14 @@
+name: test
+
+on:
+  pull_request:
+
+jobs:
+  build-push:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: pip insall -r requirements.txt
+      - name: Start testing
+        run: python test.py
