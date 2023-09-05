@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install
-        run: pip insall -r requirements.txt
+        run: pip install -r requirements.txt
       - name: Start testing
         run: python test.py
